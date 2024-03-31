@@ -1,10 +1,8 @@
 // controllers/EthereumController.js
-const {Web3} = require("web3");
+const { Web3 } = require("web3");
 
 // Initialize web3 instance
-const web3 = new Web3(
-  "https://mainnet.infura.io/v3/03a45234b5d74ae388fe670c861bbf14"
-);
+const web3 = new Web3(process.env.ETH_KEY);
 
 exports.getAccountBalance = async (req, res) => {
   try {
